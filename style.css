@@ -1,0 +1,130 @@
+ *{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+ }
+ #wrapper{
+    height:100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+ }
+ .container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+ }
+ .mountain{
+    transform: translateZ(-40px) scale(5);
+
+ }
+ .man{
+    transform: translateZ(-20px) scale(3);
+ }
+ .mountain ,.man{
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    object-fit:cover;
+ } 
+ h1{
+   position:absolute;
+   top: 3rem;
+   left:50%;
+   letter-spacing: 1px;
+   transform:translatex(-50%);
+   font-size: 7rem;
+   color: white;
+   text-shadow: 0 0 10px rgba(0,0,0,0);
+ } 
+ .secHeading{
+   font-size: 5rem;
+   padding: 0 10rem;
+ }
+ .text{
+   font-size: 1.5rem;
+   padding: 0 10rem;
+   margin: 5rem 0;
+ }
+ section{
+   background-color: rgb(45,45,45);
+   color: white;
+   padding: 5rem 0;
+ }
+ .bg{
+   position: relative;
+   width: 100%;
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+   height: 500px;
+ }
+ .desc{
+   position: absolute;
+   background-color: white;
+   padding: 0.5rem 2.5rem;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   color: black;
+   font-size: 3.5rem;
+   font-weight: 600;
+ }
+ .bg1{
+   background-image: url(biking.jpg);
+ }
+ .bg2{
+   background-image: url(image4.jpg);
+ }
+ .bg3{
+   background-image: url(surfing.jpg);
+ }
+
+
+ @media screen and (max-width: 768px) {
+  /* Adjustments for tablets */
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .mountain, .man {
+      width:100vw;
+      height:100vh;
+  }
+  h1 {
+      font-size: 4rem; /* Adjust font size for smaller screens */
+  }
+  .secHeading, .text {
+      padding: 0 4rem; /* Adjust text padding */
+      font-size: 2rem; /* Adjust text font size */
+  }
+  .bg {
+      height: 300px; /* Adjust background height */
+  }
+  .desc {
+      font-size: 2.5rem; /* Adjust description font size */
+  }
+}
+
+/* Media Query for Mobile Phones */
+@media screen and (max-width: 480px) {
+  /* Adjustments for mobile phones */
+  h1 {
+      font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+  .secHeading, .text {
+      padding: 0 1rem; /* Adjust text padding */
+      font-size: 1.5rem; /* Adjust text font size */
+  }
+  .bg {
+      height: 200px; /* Adjust background height */
+  }
+  .desc {
+      font-size: 2rem; /* Adjust description font size */
+  }
+}
